@@ -25,7 +25,8 @@ useEffect(() => {
                 <input
                     placeholder="search for movies"
                     value={searchTerm}
-                    onChange={(e)=>setSearchTerm(e.target.value)}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onKeyUp={(e) => { if (e.keyCode === 13) searchMovies(searchTerm) }}
                 />
                 <img
                     src={searchIcon}
