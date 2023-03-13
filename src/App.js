@@ -10,12 +10,15 @@ const App = () => {
     const [searchTerm,setSearchTerm]=useState('')
 
     const searchMovies =async (title) => {
-    const response = await fetch(`${API_URL}&s=${title}`)
-    const data = await response.json()
-    setMovies(data.Search)
+    // const response = await fetch(`${API_URL}&s=${title}`)
+    //     const data = await response.json()
+        const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=4d4ed145d3584846f5922b6a467e1f85&query=${title}`)
+        const dta = await res.json();
+        setMovies(dta.results)
+
 }
 
-useEffect(() => {
+    useEffect(() => {
     searchMovies('batman')
 },[])
     return (
@@ -38,7 +41,7 @@ useEffect(() => {
                 movies?.length > 0 ?
                     (<div className="container">
                         {movies.map((movie) => (
-                            <MovieCard movie={movie} />
+                            <MovieCard movie={movie} key={movie.id} />
                         ))}
                     </div>) :
                     (
