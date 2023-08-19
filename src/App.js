@@ -14,7 +14,6 @@ const App = () => {
                 <Routes>
                     <Route exact path='/' element={<Movies/>} />
                     <Route  path='/:id' element={<Modal/>} />
-                    
                 </Routes>
                 <Footer/>
             </BrowserRouter>

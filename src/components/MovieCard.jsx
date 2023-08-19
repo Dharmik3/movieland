@@ -31,7 +31,7 @@ const MovieCard = ({ movie }) => {
         />
       </div>
       <div>
-        <span>{movie.vote_average.toFixed(1)}</span>
+        <span>{movie.vote_average&&movie.vote_average.toFixed(1)}</span>
         <h3>{movie.title}</h3>
       </div>
     </Link>
