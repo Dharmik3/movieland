@@ -86,3 +86,13 @@ background-color: rgba(0, 0, 0, 0.457);
 .logo_link{
   text-decoration: none;
 }
+
+.footer{
+  position: fixed;
+  bottom: 0;
+}
+
+.app{
+  height: 100%;
+  width: 100%;
+}
