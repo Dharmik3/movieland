@@ -1,26 +1,24 @@
 .modal_container {
- 
   height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
-background-color: rgba(0, 0, 0, 0.457);
-   /* -webkit-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.457);
+  /* -webkit-filter: blur(3px);
   -moz-filter: blur(3px);
   -o-filter: blur(3px);
   -ms-filter: blur(3px);
   filter: blur(3px); */
   z-index: 100;
-   background-position: center;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 3rem;
 }
 
 .modal_container .modal {
-    position: absolute;
-    top: 0;
+  position: absolute;
+  top: 0;
   left: 0;
   bottom: 0;
   right: 0;
@@ -39,7 +37,6 @@ background-color: rgba(0, 0, 0, 0.457);
   color: white;
 }
 
-
 @keyframes animate {
   from {
     transform: scale(0.5);
@@ -49,10 +46,10 @@ background-color: rgba(0, 0, 0, 0.457);
   }
 }
 
-.title{
+.title {
   font-size: 3rem;
   letter-spacing: 0.9px;
-  background:linear-gradient(rgb(255, 255, 255),rgba(227, 193, 193, 0.936));
+  background: linear-gradient(rgb(255, 255, 255), rgba(227, 193, 193, 0.936));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -61,28 +58,47 @@ background-color: rgba(0, 0, 0, 0.457);
   margin-top: 1rem;
 }
 
-.description{
+.description {
   width: 70%;
   margin: 1rem auto;
 }
-.release_date{
+.release_date {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
-.span_date{
+.span_date {
   color: bisque;
   font-weight: bolder;
 }
-.rating{
+.rating {
   font-size: 1rem;
   margin-bottom: 2rem;
 }
-.span_rating{
-  color:antiquewhite;
+.span_rating {
+  color: antiquewhite;
   font-weight: bold;
-  
 }
 
-.logo_link{
+.logo_link {
   text-decoration: none;
+}
+
+.container {
+  padding: 0 4rem 0 4rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.main_heading {
+  padding-top: 4rem;
+}
+
+.modal_heading_container {
+  background-color: #2626267f;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.fixedFooter {
+  position: fixed;
 }

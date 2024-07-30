@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import searchIcon from "../assets/search.svg";
-import { SET_MOVIES,SET_MOVIE } from "../context/actionType";
+import { SET_MOVIES, SET_MOVIE } from "../context/actionType";
 import { useStateValue } from "../context/StateProvider";
-import { Link } from "react-router-dom";
+
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [{ movie},dispatch ] = useStateValue();
+  const [{ movie }, dispatch] = useStateValue();
 
   const searchMovies = async (title) => {
     const res = await fetch(
@@ -17,27 +17,15 @@ const Header = () => {
       movies: data.results,
     });
   };
-  const handleLogoClick = () => {
-    dispatch({
-      type: SET_MOVIE,
-      movie:null
-  })
-}
+
   useEffect(() => {
     searchMovies("spider man");
   }, []);
 
   return (
     <>
-      <Link to={`/`} onClick={handleLogoClick} className="logo_link">
-        {movie === null ? (
-          <h1 className="main_heading">MovieLand</h1>
-        ) : (
-          <div className="wrapper_modal_heading">
-            <h1 className="modal_heading">MovieLand</h1>
-          </div>
-        )}
-      </Link>
+      {movie === null && <h1 className="main_heading">MovieLand</h1>}
+
       {movie === null ? (
         <div className="search">
           <input
